@@ -361,6 +361,9 @@ storage layout must ship as a numbered migration:
 - Additive changes (new `DataKey` variants, new methods) need no migration; changing or removing
   the shape of an existing key does, and the new code must bump the migration version.
 - Call `migrate` in the same transaction batch as the upgrade, and verify with `migration_version()`.
+## Documentation
+
+- [Canonical signed payload encoding](docs/signing-payload.md) — exact field order, XDR encoding rules, and test vectors required by backend signing services (issue #213)
 
 ## Development
 
